@@ -17,6 +17,10 @@
     });
     document.body.setAttribute('data-view', id);
     window.scrollTo(0, 0);
+
+    // Cada sección scrollea en su propio contenedor
+    var main = views[id].querySelector('main');
+    if (main) main.scrollTop = 0;
   }
 
   window.addEventListener('hashchange', show);
