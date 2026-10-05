@@ -183,7 +183,25 @@ body:not([data-view="inicio"]) .topbar__label { display: none; }
 }
 .cta:hover,
 .cta:focus-visible { background-color: #9A1010; }
-.hero > .cta:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+.cta:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+
+/* Botón de autorización (más oscuro) */
+.cta--dark {
+  background-color: var(--rojo-oscuro);
+}
+.cta--dark:hover,
+.cta--dark:focus-visible {
+  background-color: #651212;
+}
+
+/* Botones de inscripción y autorización, uno debajo del otro */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+.cta-group .cta { text-align: center; }
 
 /* Estadísticas */
 .stats {
@@ -425,6 +443,7 @@ a:focus-visible { outline: 2px solid var(--azul); outline-offset: -2px; }
   .topbar { padding: 0.75rem 1rem; }
   .hero { padding: 2.5rem 1.25rem; }
   .hero__eyebrow { letter-spacing: 0.2em; }
+  .cta { padding: 0.9rem 1.6rem; font-size: 1rem; }
 
   /* La botonera se mantiene en dos columnas, más compacta */
   .pager__item { padding: 0.9rem 1rem; }
